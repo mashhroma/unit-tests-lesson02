@@ -8,13 +8,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VehicleTest {
 
+    Car car;
+    Motorcycle motorcycle;
+
+    @BeforeEach
+    void setUp() {
+        car = new Car("Dodge", "Ram", 2010);
+        motorcycle = new Motorcycle("Yamaha", "YZF-R1", 2015);
+    }
+
     /** 1. Проверить, что экземпляр объекта Car также является экземпляром транспортного средства
      * (используя оператор instanceof).
      */
     @Test
     void testCarIsInstanceOfVehicle() {
-        // Arrange (Подготовка)
-        Car car = new Car("Dodge", "Ram", 2010);
         // Assert (Проверка утверждения)
         assertTrue(car instanceof Vehicle);
     }
@@ -24,8 +31,6 @@ class VehicleTest {
      */
     @Test
     void testCarHasFourWheels() {
-        // Arrange (Подготовка)
-        Car car = new Car("Dodge", "Ram", 2010);
         // Assert (Проверка утверждения)
         assertThat(car.getNumWheels()).isEqualTo(4);
     }
@@ -35,8 +40,6 @@ class VehicleTest {
      */
     @Test
     void testMotorcycleHasTwoWheels() {
-        // Arrange (Подготовка)
-        Motorcycle motorcycle = new Motorcycle("Yamaha", "YZF-R1", 2015);
         // Assert (Проверка утверждения)
         assertThat(motorcycle.getNumWheels()).isEqualTo(2);
     }
@@ -47,8 +50,6 @@ class VehicleTest {
      */
     @Test
     void testCarHasTestSpeed60() {
-        // Arrange (Подготовка)
-        Car car = new Car("Dodge", "Ram", 2010);
         // Act (Выполнение)
         car.testDrive();
         // Assert (Проверка утверждения)
@@ -61,8 +62,6 @@ class VehicleTest {
      */
     @Test
     void testMotorcycleHasTestSpeed75() {
-        // Arrange (Подготовка)
-        Motorcycle motorcycle = new Motorcycle("Yamaha", "YZF-R1", 2015);
         // Act (Выполнение)
         motorcycle.testDrive();
         // Assert (Проверка утверждения)
@@ -75,8 +74,6 @@ class VehicleTest {
      */
     @Test
     void testParkingCarStopped() {
-        // Arrange (Подготовка)
-        Car car = new Car("Dodge", "Ram", 2010);
         // Act (Выполнение)
         car.testDrive();
         car.park();
@@ -90,8 +87,6 @@ class VehicleTest {
      */
     @Test
     void testParkingMotorcycleStopped() {
-        // Arrange (Подготовка)
-        Motorcycle motorcycle = new Motorcycle("Yamaha", "YZF-R1", 2015);
         // Act (Выполнение)
         motorcycle.testDrive();
         motorcycle.park();
