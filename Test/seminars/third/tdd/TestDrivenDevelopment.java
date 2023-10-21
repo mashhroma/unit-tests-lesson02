@@ -9,6 +9,13 @@ import static org.assertj.core.api.Assertions.*;
 
 public class TestDrivenDevelopment {
 
+    /**
+     * Задание №5
+     * Примените подход TDD для создания нового класса MoodAnalyser,
+     * который оценивает настроение выраженное во фразах.
+     * *
+     */
+
     MoodAnalyser moodAnalyser;
     @BeforeEach
     void  setUp(){
