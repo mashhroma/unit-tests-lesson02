@@ -5,7 +5,7 @@
 2. Код тестов  
 [Ссылка на код тестов](ListComparationTest.java)
 3. Отчет о покрытии тестами  
-[Ссылка на отчет о покрытии тестами](./coverageReport/css/index.html)
+[Ссылка на отчет о покрытии тестами](./coverageReport/index.html)
 4. Сценарии, которые покрыты тестами:
    - **calcListAverageTest**, данный тест проверяет, что метод calcListAverage возвращает верно посчитанное среднее арифметическое значение. 
    - **calcListAverageExceptionNullTest**, данный тест проверяет, что метод calcListAverage возвращает ошибку, если передан пустой список.
